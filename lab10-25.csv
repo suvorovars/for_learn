@@ -1,0 +1,21 @@
+# Исследование категориальных признаков
+plt.figure(figsize=(12, 10))
+
+plt.subplot(2, 2, 1)
+sns.countplot(data=df, y='BROKERTITLE', order=df['BROKERTITLE'].value_counts().index)
+plt.title('Распределение по брокерам')
+
+plt.subplot(2, 2, 2)
+sns.countplot(data=df, y='TYPE', order=df['TYPE'].value_counts().index)
+plt.title('Распределение типов домов')
+
+plt.subplot(2, 2, 3)
+sns.countplot(data=df, y='LOCALITY', order=df['LOCALITY'].value_counts().index)
+plt.title('Распределение локаций')
+
+plt.subplot(2, 2, 4)
+sns.countplot(data=df, y='SUBLOCALITY', order=df['SUBLOCALITY'].value_counts().index)
+plt.title('Распределение сублокаций')
+
+plt.tight_layout()
+plt.show()
